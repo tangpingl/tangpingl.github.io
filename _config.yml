@@ -4,9 +4,9 @@
 baseurl:
 url: https://tangpingl.github.io/
 date_format: "ordinal"
-title: 唐平的博客
-subtitle: "程序员"
-description: "唐平的个人博客"
+title: 左灯右行的博客
+subtitle: "Talk is cheap show me the code"
+description: "左灯右行"
 keywords: 博客, 程序员
 timezone: Asia/Shanghai
 encoding: "utf-8"
