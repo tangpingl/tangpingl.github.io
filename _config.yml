@@ -16,8 +16,8 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: ping Tang
-organization: 
-organization_url: 
+organization:
+organization_url:
 github_username: tangpingl
 location: Chengdu, China
 email: 15680600116@163.com
@@ -65,6 +65,15 @@ subscribe_rss: /feed.xml
 markdown: kramdown
 kramdown:
     input: GFM
+    syntax_highlighter_opts:
+      # Rouge Options › https://github.com/jneen/rouge#full-options
+      css_class: 'highlight'
+      #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+      span:
+        line_numbers: false
+      block:
+        line_numbers: true
+        start_line: 1
 highlighter: rouge
 paginate: 10
 lsi: false
@@ -129,7 +138,7 @@ google:
     analytics_id: UA-163939314-1
     adsense:
         footer: true
-        sidebar: true 
+        sidebar: true
         content_header: true
         content_footer: false
 destination: ./_site
