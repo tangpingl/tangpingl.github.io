@@ -2,13 +2,13 @@
 layout: page
 title: About
 description: 打码改变世界
-keywords: 唐平
+keywords: 左灯右行
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是唐平，码而生，码而立。
+我是左灯右行，码而生，码而立。
 
 仰慕「优雅编码的艺术」。
 
