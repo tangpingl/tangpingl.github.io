@@ -163,10 +163,7 @@ public class ExampleAutoConfigure {
 * <font color='#ff3333'>@ConditionalOnProperty(prefix = "example.service", value = "enabled", havingValue = "true")</font> : example.service.enabled : true, 这种情况才会加载这个Bean
 
 
-> springBoot 中相关注解：
-
-> @Conditional 相关注解
-
+> springBoot 中相关注解： @Conditional 相关注解
 
 | 条件化注解   | 配置生效条件   |  备注  |
 | :----:   | :-----  | :----:  |
