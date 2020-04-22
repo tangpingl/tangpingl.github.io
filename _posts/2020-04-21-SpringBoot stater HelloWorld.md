@@ -212,7 +212,7 @@ example.service.suffix=world
 example.service.enabled=true
 ```
 
-3.在spring测试勒种调用ExampleService中的方法
+3.在spring测试类中调用ExampleService中的方法
 
 ```java
 @RunWith(SpringRunner.class)
