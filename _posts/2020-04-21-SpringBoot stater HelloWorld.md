@@ -80,7 +80,7 @@ topmost: false
 Spring官方对starter的命名有一定的规范，例如spring 官方定义的包命名为：<font color=#ff3333>spring-boot-starter-{name}</font>,如果是非官方版本的stater定义为：<font color=#ff3333>{name}-spring-boot-starter</font>。
 
 # 实现步骤
-1. 在<font color=#ff3333>simple-spring-boot-starter</font>项目中定义需要实现的功能模块，定义简单的主体方法，<font color=#ff3333>helloWorld(String word)</font>实现字符串的拼接。
+1.在<font color=#ff3333>simple-spring-boot-starter</font>项目中定义需要实现的功能模块，定义简单的主体方法，<font color=#ff3333>helloWorld(String word)</font>实现字符串的拼接。
 
 ```java
 public class ExampleService {
@@ -101,7 +101,7 @@ public class ExampleService {
 
 ```
 
-2. 在SpringBoot中通过<font color=#ff3333>@ConfigurationProperties</font>注解通过前缀+后缀批注去除yml中配置文件内容。
+2.在SpringBoot中通过<font color=#ff3333>@ConfigurationProperties</font>注解通过前缀+后缀批注去除yml中配置文件内容。
 
 ```java
 @ConfigurationProperties("example.service")
@@ -128,7 +128,7 @@ public class ExampleServiceProperties {
 }
 ```
 
-3. 最重要的是定义<font color=#ff3333>AutoConfiguration</font>,在simple-spring-boot-stater项目中定义ExampleAutoConfigure 实现自动注入。
+3.最重要的是定义<font color=#ff3333>AutoConfiguration</font>,在simple-spring-boot-stater项目中定义ExampleAutoConfigure 实现自动注入。
 
 * @Configuration 配置类注解
 * @ConditionalOnClass(ExampleService.class) : 当在classpath下 有ExampleService 这个类时才进行加载。
@@ -165,7 +165,8 @@ public class ExampleAutoConfigure {
 
 > springBoot 中相关注解：
 
-* @Conditional 相关注解
+> @Conditional 相关注解
+
 
 | 条件化注解   | 配置生效条件   |  备注  |
 | :----:   | :-----  | :----:  |
@@ -181,7 +182,7 @@ public class ExampleAutoConfigure {
 | @ConditionalOnNotWebApplication     |    指定不是一个web应用程序    |    |
 
 
-4. 在resouces 环境下创建<font color='#ff3333'>META-INF</font>目录，然后在创建<font color=#ff3333>spring.factories</font>文件：
+4.在resouces 环境下创建<font color='#ff3333'>META-INF</font>目录，然后在创建<font color=#ff3333>spring.factories</font>文件：
 
 ```java
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
@@ -191,7 +192,7 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 
 
 # 测试
-1. 新建项目依赖这个项目进行测试
+1.新建项目依赖这个项目进行测试
 
 > 引入maven项目
 
@@ -204,7 +205,7 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 
 ```
 
-2. 在application.properties 中添加配置
+2.在application.properties 中添加配置
 
 ```java
 example.service.prefix=nihao
@@ -212,7 +213,7 @@ example.service.suffix=world
 example.service.enabled=true
 ```
 
-3. 在spring测试勒种调用ExampleService中的方法
+3.在spring测试勒种调用ExampleService中的方法
 
 ```java
 @RunWith(SpringRunner.class)
@@ -230,7 +231,7 @@ public class SimpleStaterTest {
 }
 ```
 
-4. 方法执行结果
+4.方法执行结果
 
 ```
 nihaoworldhow
