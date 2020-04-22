@@ -166,6 +166,7 @@ public class ExampleAutoConfigure {
 > springBoot 中相关注解：
 
 * @Conditional 相关注解
+
 | 条件化注解   | 配置生效条件   |  备注  |
 | :----:   | :-----  | :----:  |
 | @ConditionalOnBean   | 配置了某个特定的Bean |        |
@@ -180,7 +181,7 @@ public class ExampleAutoConfigure {
 | @ConditionalOnNotWebApplication     |    指定不是一个web应用程序    |    |
 
 
-4. 在resouces 环境下创建<font color=#ff3333>META-INF</font>目录，然后在创建<font color=#ff3333>spring.factories</font>文件：
+4. 在resouces 环境下创建<font color='#ff3333'>META-INF</font>目录，然后在创建<font color=#ff3333>spring.factories</font>文件：
 
 ```java
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
@@ -234,3 +235,8 @@ public class SimpleStaterTest {
 ```
 nihaoworldhow
 ```
+
+# github地址
+[simple-spring-boot-stater][1]
+
+ [1]: https://github.com/tangpingl/simple-spring-boot-starter       "simple-spring-boot-stater"
