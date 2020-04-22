@@ -77,10 +77,10 @@ topmost: false
 >spring-boot-configuration-processor 引入这个包主要为了生成metadata.json,方便在yml文件中引入配置时提供代码提示。
 
 
-Spring官方对starter的命名有一定的规范，例如spring 官方定义的包命名为：<font color=#ff3333>spring-boot-starter-{name}</font>,如果是非官方版本的stater定义为：<font color=#ff3333>{name}-spring-boot-starter</font>。
+Spring官方对starter的命名有一定的规范，例如spring 官方定义的包命名为：<font color='#ff3333'>spring-boot-starter-{name}</font>,如果是非官方版本的stater定义为：<font color='#ff3333'>{name}-spring-boot-starter</font>。
 
 # 实现步骤
-1.在<font color=#ff3333>simple-spring-boot-starter</font>项目中定义需要实现的功能模块，定义简单的主体方法，<font color=#ff3333>helloWorld(String word)</font>实现字符串的拼接。
+1.在<font color='#ff3333'>simple-spring-boot-starter</font>项目中定义需要实现的功能模块，定义简单的主体方法，<font color='#ff3333'>helloWorld(String word)</font>实现字符串的拼接。
 
 ```java
 public class ExampleService {
@@ -101,7 +101,7 @@ public class ExampleService {
 
 ```
 
-2.在SpringBoot中通过<font color=#ff3333>@ConfigurationProperties</font>注解通过前缀+后缀批注去除yml中配置文件内容。
+2.在SpringBoot中通过<font color=''#ff3333''>@ConfigurationProperties</font>注解通过前缀+后缀批注去除yml中配置文件内容。
 
 ```java
 @ConfigurationProperties("example.service")
@@ -128,7 +128,7 @@ public class ExampleServiceProperties {
 }
 ```
 
-3.最重要的是定义<font color=#ff3333>AutoConfiguration</font>,在simple-spring-boot-stater项目中定义ExampleAutoConfigure 实现自动注入。
+3.最重要的是定义<font color='#ff3333'>AutoConfiguration</font>,在simple-spring-boot-stater项目中定义ExampleAutoConfigure 实现自动注入。
 
 * @Configuration 配置类注解
 * @ConditionalOnClass(ExampleService.class) : 当在classpath下 有ExampleService 这个类时才进行加载。
@@ -159,8 +159,8 @@ public class ExampleAutoConfigure {
 
 > 在定义bean方法会使用到一些相关注解
 
-* <font color=#ff3333>@ConditionalOnMissingBean</font> :  表示Spring context 中不存在该bean
-* <font color=#ff3333>@ConditionalOnProperty(prefix = "example.service", value = "enabled", havingValue = "true")</font> : example.service.enabled : true, 这种情况才会加载这个Bean
+* <font color='#ff3333'>@ConditionalOnMissingBean</font> :  表示Spring context 中不存在该bean
+* <font color='#ff3333'>@ConditionalOnProperty(prefix = "example.service", value = "enabled", havingValue = "true")</font> : example.service.enabled : true, 这种情况才会加载这个Bean
 
 
 > springBoot 中相关注解：
@@ -182,7 +182,7 @@ public class ExampleAutoConfigure {
 | @ConditionalOnNotWebApplication     |    指定不是一个web应用程序    |    |
 
 
-4.在resouces 环境下创建<font color='#ff3333'>META-INF</font>目录，然后在创建<font color=#ff3333>spring.factories</font>文件：
+4.在resouces 环境下创建<font color='#ff3333'>META-INF</font>目录，然后在创建<font color='#ff3333'>spring.factories</font>文件：
 
 ```java
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
