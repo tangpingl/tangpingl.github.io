@@ -9,8 +9,10 @@ topmost: false
 ---
 
 > 在SpringBoot 项目中有很多模块都是由starter模块组成的，为实现一些特定的功能，我们可以自定义Spring-Boot-Stater来实现特定功能。
+
 # 引入配置
-开始之前创建maven项目，导入创建SpringStater需要配置：
+
+>开始之前创建maven项目，导入创建SpringStater需要配置：
 
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
